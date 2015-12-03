@@ -1,0 +1,13 @@
+{
+	"nativescript": {
+		"id": "org.nativescript.demo",
+		"tns-ios": {
+			"version": "1.5.0"
+		}
+	},
+	"dependencies": {
+    // TODO
+		"nativescript-admob": "file:../nativescript-admob",
+		"tns-core-modules": "1.4.0"
+	}
+}
