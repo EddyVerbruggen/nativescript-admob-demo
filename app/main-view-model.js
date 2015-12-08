@@ -10,17 +10,18 @@ var DemoAppModel = (function (_super) {
   DemoAppModel.prototype.doCreateBanner = function (size) {
     admob.createBanner({
       // if the 'view' property is not set, the banner is overlayed on the current top most view
-      testing: true,
+      testing: false,
       size: size,
       iosBannerId: "ca-app-pub-9517346003011652/3985369721",
       iosInterstitialId: "ca-app-pub-9517346003011652/6938836122", // Note: not used yet
       androidBannerId: "ca-app-pub-9517346003011652/7749101329",
       androidInterstitialId: "ca-app-pub-9517346003011652/6938836122", // Note: not used yet
-      testDeviceIds: ["yourTestDeviceUDIDs", "canBeAddedHere"],
+      // Android automatically adds the connected device as test device with testing:true, iOS does not
+      iosTestDeviceIds: ["yourTestDeviceUDIDs", "canBeAddedHere"],
       margins: {
         // if both are set, top wins
         //top: 10
-        bottom: 10
+        bottom: 50
       }
     }).then(
         function() {
