@@ -7,7 +7,7 @@
             <StackLayout cssClass="tab-content">
               <Image margin="10" src="~/res/telerik-logo.png" />
               <Label text="AdMob plugin demo" cssClass="title"/>
-              <Label text="Make some money with your app!" textWrap="true"/>
+              <Label text="The AdMob plugin offers an easy way to show Google AdMob banners in your app. You can choose from various banner sizes and positions." textWrap="true"/>
             </StackLayout>
           </ScrollView>
         </TabViewItem.view>

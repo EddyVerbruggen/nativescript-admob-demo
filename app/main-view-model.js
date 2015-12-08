@@ -12,12 +12,15 @@ var DemoAppModel = (function (_super) {
       // if the 'view' property is not set, the banner is overlayed on the current top most view
       testing: true,
       size: size,
-      bannerId: "ca-app-pub-9517346003011652/3985369721", // interstitial:  "ca-app-pub-9517346003011652/6938836122";
+      iosBannerId: "ca-app-pub-9517346003011652/3985369721",
+      iosInterstitialId: "ca-app-pub-9517346003011652/6938836122", // Note: not used yet
+      androidBannerId: "ca-app-pub-9517346003011652/7749101329",
+      androidInterstitialId: "ca-app-pub-9517346003011652/6938836122", // Note: not used yet
       testDeviceIds: ["yourTestDeviceUDIDs", "canBeAddedHere"],
       margins: {
         // if both are set, top wins
-        //top: 20
-        bottom: 50
+        //top: 10
+        bottom: 10
       }
     }).then(
         function() {
