@@ -30,10 +30,12 @@ $ tns run ios --emulator
 $ tns run android --emulator
 ```
 
-## Screenshots (TODO)
+## Screenshots (iOS)
 
 ![](screenshots/iOS/01-ios-smart.PNG)
 
+
 ![](screenshots/iOS/02-ios-rectangle.PNG)
+
 
 ![](screenshots/iOS/03-ios-interstitial.PNG)
