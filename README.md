@@ -32,6 +32,8 @@ $ tns run android --emulator
 
 ## Screenshots (TODO)
 
-![](screenshots/ios/ios-1.png)
+![](screenshots/iOS/01-ios-smart.PNG)
 
-![](screenshots/android/android-1.png)
+![](screenshots/iOS/02-ios-rectangle.PNG)
+
+![](screenshots/iOS/03-ios-interstitial.PNG)
