@@ -33,7 +33,7 @@ var DemoAppModel = (function (_super) {
 
   DemoAppModel.prototype.doCreateInterstitial = function () {
     admob.createInterstitial({
-      testing: false,
+      testing: true,
       iosInterstitialId: "ca-app-pub-9517346003011652/6938836122",
       androidInterstitialId: "ca-app-pub-9517346003011652/6938836122",
       // Android automatically adds the connected device as test device with testing:true, iOS does not
