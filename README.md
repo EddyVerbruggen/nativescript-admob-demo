@@ -39,3 +39,5 @@ $ tns run android --emulator
 
 
 ![](screenshots/iOS/03-ios-interstitial.PNG)
+
+Not trying to promote that game btw :)
