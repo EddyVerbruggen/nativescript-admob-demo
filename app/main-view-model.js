@@ -28,7 +28,7 @@ var DemoAppModel = (function (_super) {
         function(error) {
           console.log("admob createBanner error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doCreateInterstitial = function () {
@@ -45,7 +45,7 @@ var DemoAppModel = (function (_super) {
         function(error) {
           console.log("admob createInterstitial error: " + error);
         }
-    )
+    );
   };
 
   DemoAppModel.prototype.doCreateSmartBanner = function () {
