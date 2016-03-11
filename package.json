@@ -9,7 +9,7 @@
     }
   },
   "dependencies": {
-    "nativescript-admob": "1.1.1",
+    "nativescript-admob": "1.1.2",
     "tns-core-modules": "1.6.0"
   },
   "devDependencies": {
