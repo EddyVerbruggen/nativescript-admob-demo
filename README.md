@@ -10,6 +10,7 @@ Once you have the [CLI installed](https://github.com/NativeScript/nativescript-c
 ```
 $ git clone https://github.com/EddyVerbruggen/nativescript-admob-demo
 $ cd nativescript-admob-demo
+$ cd AdMob
 ```
 
 Next, install the app's iOS and Android runtimes, as well as the app's npm dependencies:
