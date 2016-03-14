@@ -1,4 +1,7 @@
-.idea
-platforms
-node_modules
-lib
+*/bin
+*/obj
+*.user-settings.xml
+AdMob/node_modules
+AdMob/platforms
+AdMob/lib
+AdMob/hooks
