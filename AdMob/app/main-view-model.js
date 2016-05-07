@@ -80,7 +80,7 @@ var DemoAppModel = (function (_super) {
         function(error) {
           console.log("admob hideBanner error: " + error);
         }
-    )
+    );
   };
 
   return DemoAppModel;
