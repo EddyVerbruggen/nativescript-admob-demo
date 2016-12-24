@@ -25,8 +25,8 @@
             <Button row="2" col="0" text="rectangle" tap="{{ doCreateRectangularBanner }}" />
             <Button row="2" col="1" text="interstitial" tap="{{ doCreateInterstitial }}" cssClass="button-interstitial" />
 
-            <Button row="3" colSpan="2" text="hide banner" tap="{{ doHideBanner }}" cssClass="button-hide"/>
-
+            <Button row="3" col="0" text="leaderboard" tap="{{ doCreateLeaderboardBanner }}" />
+            <Button row="3" col="1" text="hide banner" tap="{{ doHideBanner }}" cssClass="button-hide" />
           </GridLayout>
         </TabViewItem.view>
       </TabViewItem>
