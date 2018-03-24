@@ -1,32 +1,34 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
-  <TabView>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+<TabView>
     <TabView.items>
       <TabViewItem title="About">
         <TabViewItem.view>
           <ScrollView>
-            <StackLayout cssClass="tab-content">
-              <Image margin="10" src="~/res/telerik-logo.png" />
-              <Label text="AdMob plugin demo" cssClass="title"/>
-              <Label text="The AdMob plugin offers an easy way to show Google AdMob banners in your app. You can choose from various banner sizes and positions." textWrap="true"/>
+            <StackLayout class="tab-content">
+              <Image margin="10" src="~/res/telerik-logo.png"/>
+              <Label text="AdMob plugin demo" class="title"/>
+              <Label
+                  text="The AdMob plugin offers an easy way to show Google AdMob banners in your app. You can choose from various banner sizes and positions."
+                  textWrap="true"/>
             </StackLayout>
           </ScrollView>
         </TabViewItem.view>
       </TabViewItem>
       <TabViewItem title="Demo">
         <TabViewItem.view>
-          <GridLayout columns="*, *" rows="auto, auto, auto, auto" horizontalAlignment="center" cssClass="tab-content">
+          <GridLayout columns="*, *" rows="auto, auto, auto, auto" horizontalAlignment="center" class="tab-content">
 
-            <Button row="0" col="0" text="smart banner" tap="{{ doCreateSmartBanner }}" />
-            <Button row="0" col="1"  text="regular banner" tap="{{ doCreateRegularBanner }}"/>
+            <Button row="0" col="0" text="smart banner" tap="{{ doCreateSmartBanner }}"/>
+            <Button row="0" col="1" text="regular banner" tap="{{ doCreateRegularBanner }}"/>
 
-            <Button row="1" col="0" text="skyscraper" tap="{{ doCreateSkyscraperBanner }}" />
-            <Button row="1" col="1"  text="large banner" tap="{{ doCreateLargeBanner }}"/>
+            <Button row="1" col="0" text="skyscraper" tap="{{ doCreateSkyscraperBanner }}"/>
+            <Button row="1" col="1" text="large banner" tap="{{ doCreateLargeBanner }}"/>
 
-            <Button row="2" col="0" text="rectangle" tap="{{ doCreateRectangularBanner }}" />
-            <Button row="2" col="1" text="interstitial" tap="{{ doCreateInterstitial }}" cssClass="button-interstitial" />
+            <Button row="2" col="0" text="rectangle" tap="{{ doCreateRectangularBanner }}"/>
+            <Button row="2" col="1" text="interstitial" tap="{{ doCreateInterstitial }}" class="button-interstitial"/>
 
-            <Button row="3" col="0" text="leaderboard" tap="{{ doCreateLeaderboardBanner }}" />
-            <Button row="3" col="1" text="hide banner" tap="{{ doHideBanner }}" cssClass="button-hide" />
+            <Button row="3" col="0" text="leaderboard" tap="{{ doCreateLeaderboardBanner }}"/>
+            <Button row="3" col="1" text="hide banner" tap="{{ doHideBanner }}" class="button-hide"/>
           </GridLayout>
         </TabViewItem.view>
       </TabViewItem>

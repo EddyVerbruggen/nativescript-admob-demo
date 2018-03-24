@@ -1,13 +1,11 @@
-var observable = require("data/observable");
+var Observable = require("tns-core-modules/data/observable").Observable;
+var platform = require("tns-core-modules/platform");
 var admob = require("nativescript-admob");
-//var dialogs = require("ui/dialogs");
-var DemoAppModel = (function (_super) {
-  __extends(DemoAppModel, _super);
-  function DemoAppModel() {
-    _super.call(this);
-  }
 
-  DemoAppModel.prototype.doCreateBanner = function (size) {
+function createViewModel() {
+  var viewModel = new Observable();
+
+  viewModel.doCreateBanner = function (size) {
     admob.createBanner({
       // if the 'view' property is not set, the banner is overlayed on the current top most view
       testing: true,
@@ -19,8 +17,9 @@ var DemoAppModel = (function (_super) {
       margins: {
         // if both are set, top wins
         //top: 10
-        bottom: 50
-      }
+        bottom: platform.isIOS ? 50 : 0
+      },
+      keywords: ["foo", "bar"]
     }).then(
         function() {
           console.log("admob createBanner done");
@@ -31,7 +30,7 @@ var DemoAppModel = (function (_super) {
     );
   };
 
-  DemoAppModel.prototype.doCreateInterstitial = function () {
+  viewModel.doCreateInterstitial = function () {
     admob.createInterstitial({
       testing: true,
       iosInterstitialId: "ca-app-pub-9517346003011652/6938836122",
@@ -48,31 +47,31 @@ var DemoAppModel = (function (_super) {
     );
   };
 
-  DemoAppModel.prototype.doCreateSmartBanner = function () {
+  viewModel.doCreateSmartBanner = function () {
     this.doCreateBanner(admob.AD_SIZE.SMART_BANNER);
   };
 
-  DemoAppModel.prototype.doCreateSkyscraperBanner = function () {
+  viewModel.doCreateSkyscraperBanner = function () {
     this.doCreateBanner(admob.AD_SIZE.SKYSCRAPER);
   };
 
-  DemoAppModel.prototype.doCreateLargeBanner = function () {
+  viewModel.doCreateLargeBanner = function () {
     this.doCreateBanner(admob.AD_SIZE.LARGE_BANNER);
   };
 
-  DemoAppModel.prototype.doCreateRegularBanner = function () {
+  viewModel.doCreateRegularBanner = function () {
     this.doCreateBanner(admob.AD_SIZE.BANNER);
   };
 
-  DemoAppModel.prototype.doCreateRectangularBanner = function () {
+  viewModel.doCreateRectangularBanner = function () {
     this.doCreateBanner(admob.AD_SIZE.MEDIUM_RECTANGLE);
   };
 
-  DemoAppModel.prototype.doCreateLeaderboardBanner = function () {
+  viewModel.doCreateLeaderboardBanner = function () {
     this.doCreateBanner(admob.AD_SIZE.LEADERBOARD);
   };
 
-  DemoAppModel.prototype.doHideBanner = function () {
+  viewModel.doHideBanner = function () {
     admob.hideBanner().then(
         function() {
           console.log("admob hideBanner done");
@@ -83,7 +82,7 @@ var DemoAppModel = (function (_super) {
     );
   };
 
-  return DemoAppModel;
-})(observable.Observable);
-exports.DemoAppModel = DemoAppModel;
-exports.mainViewModel = new DemoAppModel();
+  return viewModel;
+}
+
+exports.createViewModel = createViewModel;
