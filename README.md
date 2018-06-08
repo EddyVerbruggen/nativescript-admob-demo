@@ -1,6 +1,6 @@
 # nativescript-admob demo app
 
-Demo app for the {N} [admob plugin](https://www.npmjs.com/package/nativescript-admob)
+> DEPRECATED: this demo app has now been integrated into the [NativeScript AdMob plugin](https://github.com/EddyVerbruggen/nativescript-admob).
 
 ## Installation
 
